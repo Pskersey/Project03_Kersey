@@ -7,13 +7,13 @@ public class ManaBar_cs : MonoBehaviour
 {
     public Slider _manaSlider;
 
-    public void SetMaxMana(int mana)
+    public void SetMaxMana(float mana)
     {
         _manaSlider.maxValue = mana;
         _manaSlider.value = mana;
     }
 
-    public void SetMana(int mana)
+    public void SetMana(float mana)
     {
         _manaSlider.value = mana;
     }
