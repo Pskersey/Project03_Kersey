@@ -21,13 +21,21 @@ public class EnemyController_cs : MonoBehaviour
         {
             TakeDamage(1);
         }
+        
     }
 
-    void TakeDamage (int damage)
+    public void TakeDamage (int damage)
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+
+        Debug.Log("Took Damage!");
+
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
